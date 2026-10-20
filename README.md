@@ -18,14 +18,15 @@ An online retail operations team wants to know where cancellation records are co
 - Some high-value descriptions are fees or manual adjustments rather than ordinary products, so item classification needs review.
 
 ## Dashboard
-Open `dashboard.html` in a browser. Click the tabs to explore monthly, description, and country breakdowns. The dashboard is self-contained.
+![E-commerce cancellation dashboard preview](dashboard-preview.png)
+
+[Open the interactive dashboard](https://nilesh581.github.io/ecommerce-cancellation-analysis/dashboard.html). Click the tabs to explore monthly, description, and country breakdowns. The dashboard is self-contained; the source file is `dashboard.html`.
 
 ## Methods and limitations
-Analysis uses SQL and Python for data preparation, invoice classification, and aggregation. The £896,812.49 is **associated transaction value**, not confirmed refunds, lost revenue, or recoverable profit. The dataset does not provide cancellation reasons, refund outcomes, product margins, or intervention results.
+The included Python script uses pandas for data preparation, invoice classification, and aggregation. The £896,812.49 is **associated transaction value**, not confirmed refunds, lost revenue, or recoverable profit. The dataset does not provide cancellation reasons, refund outcomes, product margins, or intervention results.
 
 ## Resume bullet
-Analyzed 541,909 UCI online retail transactions using SQL and Python; identified 3,836 cancellation invoices with £896.8K in associated line-item value and built a dashboard to compare patterns by month, item description, and country.
+Analyzed 541,909 UCI online retail transactions with Python and pandas; identified 3,836 cancellation invoices with £896.8K in associated line-item value and built a dashboard to compare patterns by month, item description, and country.
 
 ## Rebuild the dashboard
-
 Install the dependencies with `python -m pip install pandas openpyxl`, then run `python build_dashboard.py` from this folder. The script reads the included dataset and regenerates `dashboard.html`. (The churn and bank projects only require pandas; openpyxl is needed for the retail Excel dataset.)
